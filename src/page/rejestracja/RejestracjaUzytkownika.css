@@ -1,0 +1,52 @@
+/* RegisterUser.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #242424; /* Set the background color of the entire page */
+    color: white; /* Set the default text color */
+}
+
+.split-container {
+    display: flex;
+    width: 80%;
+}
+
+.logo-container {
+    flex: 1;
+    padding: 20px;
+    background-color: black; /* Set the background color of the left side */
+}
+
+.form-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #242424; /* Set the background color of the right side */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white; /* Set the background color of the form elements */
+    color: #242424; /* Set the text color */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

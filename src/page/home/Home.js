@@ -6,6 +6,7 @@ const Home = () => {
         <h1>Home Page</h1>
         <h3>Navigate</h3>
         <ul>
+            <li><a href="/rejestracja/rejestracja">Zarejestruj sie</a></li>
             <li><a href="/kierunek/register">Register kierunek</a></li>
             <li><a href="/dane-rekrutacyjne/register">Register dane rekrutacyjne</a></li>
         </ul>
