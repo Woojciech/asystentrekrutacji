@@ -1,18 +1,24 @@
-import React, { useEffect } from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  return (
-    <div>
-        <h1>Home Page</h1>
-        <h3>Navigate</h3>
-        <ul>
-            <li><a href="/rejestracja/rejestracja">Zarejestruj sie</a></li>
-            <li><a href="/kierunek/register">Register kierunek</a></li>
-            <li><a href="/dane-rekrutacyjne/register">Register dane rekrutacyjne</a></li>
-        </ul>
-    </div>
-    
-  )
-}
+    const navigate = useNavigate();
 
-export default Home
+    const handleNavigation = (path) => {
+        navigate(path);
+    };
+
+    return (
+        <div>
+            <h1>Asystent rekrutacji PWr</h1>
+            <ul>
+                <li><button onClick={() => handleNavigation('/rejestracja/rejestracja')}>Zarejestruj się</button></li>
+                <li><button onClick={() => handleNavigation('/kierunek/register')}>Zarejestruj kierunek</button></li>
+                <li><button onClick={() => handleNavigation('/dane-rekrutacyjne/register')}>Zarejestruj dane rekrutacyjne</button></li>
+                <li><button onClick={() => handleNavigation('/raport/generuj-raport')}>Wygeneruj raport</button></li>
+            </ul>
+        </div>
+    );
+};
+
+export default Home;

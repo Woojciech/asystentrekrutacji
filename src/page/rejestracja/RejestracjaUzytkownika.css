@@ -6,47 +6,71 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #242424; /* Set the background color of the entire page */
-    color: white; /* Set the default text color */
+    background-color: #242424;
+    color: white;
 }
 
 .split-container {
     display: flex;
-    width: 80%;
+    width: 100%;
 }
 
 .logo-container {
-    flex: 1;
+    width: 333px;
+    height: 482px;
+    flex-shrink: 0;
     padding: 20px;
-    background-color: black; /* Set the background color of the left side */
+    background-color: black;
 }
 
 .form-container {
     flex: 1;
     padding: 20px;
-    background-color: #242424; /* Set the background color of the right side */
+    background-color: #242424;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    width: 800px;
+    height: 48px;
+    flex-shrink: 0;
 }
 
 input, select, button {
     margin: 10px 0;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 2px solid #3D3D3D;
     border-radius: 4px;
-    background-color: white; /* Set the background color of the form elements */
-    color: #242424; /* Set the text color */
+    background: #242424;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #4B72C2;
     color: white;
     cursor: pointer;
+    border: 0;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #3b66bf;
+}
+
+.form-info {
+    color: #7F7F7F;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.page-info {
+    color: #FFF;
+    font-family: Poppins, serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

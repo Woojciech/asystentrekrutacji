@@ -3,6 +3,7 @@ import RegisterDaneRekrutacyjne from './page/daneRekrutacyjne/RegisterDaneRekrut
 import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
 import Home from './page/home/Home';
 import RegisterUser from "./page/rejestracja/RejestracjaUzytkownika";
+import GenerujRaport from "./page/raport/RaportGenerator";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/rejestracja/rejestracja" element={<RegisterUser/>} />
         <Route path="/kierunek/register" element={<RegisterKierunek/>} />
         <Route path="/dane-rekrutacyjne/register" element={<RegisterDaneRekrutacyjne/>} />
+        <Route path="/raport/generuj-raport" element={<GenerujRaport/>} />
       </Routes>
     </Router>
   );
