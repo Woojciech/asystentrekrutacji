@@ -74,3 +74,19 @@ button:hover {
     font-weight: 700;
     line-height: normal;
 }
+
+.input-birth-date, input-plec {
+    color: #7F7F7F;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+form-double-column {
+    width: 800px;
+    height: 48px;
+    flex-shrink: 0;
+}

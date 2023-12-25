@@ -57,15 +57,15 @@ const RegisterUser = () => {
                                placeholder="PESEL"/>
                         <input type="text" name="numerTelefonu" value={userData.numerTelefonu}
                                onChange={handleInputChange} placeholder="Numer Telefonu"/>
-                        <div style={{display: 'flex', gap: '10px'}}>
+                        <div className="form-double-column" style={{display: 'flex', gap: '10px'}}>
                             <div style={{display: 'flex', flexDirection: 'column', gap: '2px'}}>
                                 <label className="form-info">Data Urodzenia:</label>
-                                <input type="date" name="dataUrodzenia" value={userData.dataUrodzenia}
+                                <input className={"input-birth-date"} type="date" name="dataUrodzenia" value={userData.dataUrodzenia}
                                        onChange={handleInputChange} placeholder="Data Urodzenia"/>
                             </div>
                             <div style={{display: 'flex', flexDirection: 'column', gap: '2px'}}>
                                 <label className="form-info">Płeć:</label>
-                                <select name="plec" value={userData.plec} onChange={handleInputChange}>
+                                <select  className={"input-plec"} name="plec" value={userData.plec} onChange={handleInputChange}>
                                     <option value="MEZCZYZNA">Mężczyzna</option>
                                     <option value="KOBIETA">Kobieta</option>
                                 </select>
