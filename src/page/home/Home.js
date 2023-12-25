@@ -2,13 +2,17 @@ import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
 const Home = () => {
-        const navigate = useNavigate();
+    const navigate = useNavigate();
 
-        const handleNavigation = (path) => {
-            navigate(path);
-        };
+    const handleNavigation = (path) => {
+        navigate(path);
+    };
 
-        return (
+    return (
+        <div className="split-container">
+            <div className="logo-container">
+                <img src={require('../../photos/logo-PWr-pion-bez-tla-207x300.png')} alt="Logo"/>
+            </div>
             <div>
                 <h1>Asystent rekrutacji PWr</h1>
                 <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
@@ -23,8 +27,8 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-
-        );
-    };
+        </div>
+    );
+};
 
 export default Home;
