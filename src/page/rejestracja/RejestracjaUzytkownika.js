@@ -58,7 +58,7 @@ const RegisterUser = () => {
                                placeholder="PESEL"/>
                         <input type="text" name="numerTelefonu" value={userData.numerTelefonu}
                                onChange={handleInputChange} placeholder="Numer Telefonu"/>
-                        <div className="form-double-column" style={{display: 'flex', gap: '20px'}}>
+                        <div className="form-double-column" style={{display: 'flex', gap: '2vw'}}>
                             <div style={{display: 'flex', flexDirection: 'column'}}>
                                 <label className="form-info">Data Urodzenia:</label>
                                 <input className={"input-birth-date"} type="date" name="dataUrodzenia"
