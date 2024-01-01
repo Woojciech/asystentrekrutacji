@@ -17,7 +17,7 @@ const RegisterKierunek = () => {
         
     })
 
-    const [recruitmentRules, setRecruitmentRules] = useState([]);
+    const [recruitmentRules, setRecruitmentRules] = useState([{}]);
     const [przedmiotyMaturalne, setPrzedmiotyMaturalne] = useState(['MATEMATYKA', 'FIZYKA', 'CHEMIA', 'INFORMATYKA'])
     const [stopnieMatury, setStopnieMatury] = useState(['PODSTAWOWA', 'ROZSZERZONA', 'USTNA'])
 
@@ -104,7 +104,7 @@ const RegisterKierunek = () => {
       )
     }
 
-    const [honoredMajors, setHonoredMajors] = useState([])
+    const [honoredMajors, setHonoredMajors] = useState([{}])
     const [majors, setMajors] = useState([{id: 1, nazwa: "Matematyka Stosowana"}, {id: 2, nazwa: "Fizyka Techniczna"}])
 
     function addHonoredMajor(e) {
@@ -179,7 +179,7 @@ const RegisterKierunek = () => {
       )
     }
 
-    const [honoredAchievements, setHonoredAchievements] = useState([])
+    const [honoredAchievements, setHonoredAchievements] = useState([{}])
 
     function addHonoredAchievement(e) {
       e.preventDefault();
@@ -231,8 +231,6 @@ const RegisterKierunek = () => {
                     <div className='row'>
                       <div class="col-12">
                         <label class="form-label fw-bold">Opis osiągnięcia</label>
-                        {/* <input type="text" class="form-control" id="nazwaKierunku" placeholder="Laureat I lub II stopnia" value={achievement.opis} name="opis" onChange={e => modifyHonoredAchievement(e, idx)} required/> */}
-                        {/* <label for="opisKierunku" class="form-label fw-bold">Opis osią</label> */}
                         <textarea class="form-control" id="nazwaKierunku" placeholder="Laureat I lub II stopnia" value={achievement.opis} name="opis" onChange={e => modifyHonoredAchievement(e, idx)} required></textarea>
                       </div>
                     </div>  
