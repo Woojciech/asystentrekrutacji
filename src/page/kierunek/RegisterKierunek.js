@@ -13,13 +13,31 @@ const RegisterKierunek = () => {
     const [dziedzina, setDziedzina] = useState(['Informatyka Techniczna', 'Fizyka Matematyczna', 'Matematyka Fizyczna', 'Technika Informatyczna'])
     const [wydzial, setWydzial] = useState(['Informatyczny', 'Chemiczny', 'Fizyczny'])
 
-    useEffect(() => {
-        
-    })
-
-    const [recruitmentRules, setRecruitmentRules] = useState([{}]);
     const [przedmiotyMaturalne, setPrzedmiotyMaturalne] = useState(['MATEMATYKA', 'FIZYKA', 'CHEMIA', 'INFORMATYKA'])
     const [stopnieMatury, setStopnieMatury] = useState(['PODSTAWOWA', 'ROZSZERZONA', 'USTNA'])
+
+    const [branch, setBranch] = useState()
+    const [department, setDepartment] = useState()
+
+    useEffect(() => {
+      fetchFormData();   
+    }, []);
+
+    const fetchFormData = async () => {
+      const formData = await client.get("/api/v1/kierunek/register/form-data")
+        .catch((error) => {});
+  
+      let data = formData?.data
+      console.log(data)
+      setPoziomStudiow(data.stopnieStudiow)
+      setDziedzina(data.dziedziny)
+      setWydzial(data.wydzialy)
+      setPrzedmiotyMaturalne(data.przedmiotyMaturalne)
+      setStopnieMatury(data.stopnieMatury)
+      setMajors(data.kierunki)
+    }
+
+    const [recruitmentRules, setRecruitmentRules] = useState([{}]);
 
     function modifyRecruitmentRule(e, idx) {
       e.preventDefault();
@@ -268,6 +286,8 @@ const RegisterKierunek = () => {
           {
             nazwa: name,
             opis: description,
+            dziedzina: branch,
+            wydzial: department,
             regulyWskaznikaRekrutacyjnego: recruitmentRules,
             punktyRekrutacyjneZaKierunki: honoredMajors,
             honorowaneOsiagniecia: honoredAchievements
@@ -320,7 +340,7 @@ const RegisterKierunek = () => {
                 <div className='row'>
                   <div className='col-6'>
                     <label class="form-label fw-bold">Dziedzina</label>
-                    <Form.Select>
+                    <Form.Select onChange={e => setBranch(e.target.value)}>
                       {
                         dziedzina?.map((stopien, idx) => (
                           <option value={stopien}>{stopien}</option>
@@ -330,7 +350,7 @@ const RegisterKierunek = () => {
                   </div>
                   <div className='col-6'>
                     <label class="form-label fw-bold">Wydział</label>
-                    <Form.Select>
+                    <Form.Select onChange={e => setDepartment(e.target.value)}>
                       {
                         wydzial?.map((stopien, idx) => (
                           <option value={stopien}>{stopien}</option>

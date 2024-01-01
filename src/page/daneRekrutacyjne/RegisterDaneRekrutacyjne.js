@@ -212,7 +212,7 @@ const RegisterDaneRekrutacyjne = () => {
             )) 
           }
         </ol>
-        <div class="form-text">Wprowadź ukończone studia, które mogą być wzięte pod uwagę przy rekrutacji na studia wyższego stopnia.</div>
+        <div class="form-text">Wprowadź ukończone studia, które mogą być wzięte pod uwagę przy rekrutacji na studia wyższego stopnia</div>
         <div className='col-3'>
           <button type="button" className='btn btn-lg' onClick={e => addFinishedStudies(e)}>
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="red" class="bi bi-plus-lg" viewBox="0 0 16 16">
