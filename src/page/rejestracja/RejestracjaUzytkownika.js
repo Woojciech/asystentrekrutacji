@@ -71,7 +71,6 @@ const RegisterUser = () => {
     }, []);
 
     return (
-        // <link rel="stylesheet" type="text/css" href="RejestracjaUzytkownika.css">
         <div className="split-container">
             <div className="logo-container">
                 <img src={require('../../photos/logo-PWr-pion-bez-tla-207x300.png')} alt="Logo"
