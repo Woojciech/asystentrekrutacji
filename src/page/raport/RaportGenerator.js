@@ -1,17 +1,18 @@
-import React, {useState} from 'react'
-import {useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 import './RaportGenerator.css';
 import axiosPublic from "../../utils/useAxios";
+import { useNavigate } from 'react-router-dom';
 
 
 const GenerujRaport = () => {
     const client = axiosPublic;
     const [przeprowadzoneRekrutacje, setPrzeprowadzoneRekrutacje] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await client.get("/api/v1/raport/wypiszRekrutacjeDoRaportu?userId=1").catch((error) => {
+                const response = await client.get("/api/v1/raport/wypiszRekrutacjeDoRaportu?userId=1").catch(() => {
                 });
                 const jsonData = response.data;
                 setPrzeprowadzoneRekrutacje(jsonData);
@@ -24,7 +25,7 @@ const GenerujRaport = () => {
     }, []);
 
     const handleGenerateRaport = (id) => {
-        const newWindow = window.open(`/another-endpoint/${id}`, '_blank');
+        const newWindow = window.open(`/raport/raport/${id}`, '_blank');
         if (newWindow) {
             newWindow.focus();
         }

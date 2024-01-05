@@ -1,0 +1,22 @@
+body {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #242424;
+    color: white;
+}
+
+.split-container-generatedraport {
+    display: flex;
+    width: 100%;
+}
+
+.logo-container-generatedraport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 78vh;
+    width: 10%;
+    height: 100vh;
+    background-color: black;
+}
