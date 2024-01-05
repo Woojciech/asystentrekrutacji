@@ -24,9 +24,7 @@ const GenerujRaport = () => {
     }, []);
 
     const handleGenerateRaport = (id) => {
-        // Assuming you want to use the ID in the new window's route
         const newWindow = window.open(`/another-endpoint/${id}`, '_blank');
-        // Optionally, you can focus on the new window
         if (newWindow) {
             newWindow.focus();
         }
