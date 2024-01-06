@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './RaportGenerator.css';
 import axiosPublic from "../../utils/useAxios";
-import { useNavigate } from 'react-router-dom';
 
 
 const GenerujRaport = () => {
     const client = axiosPublic;
     const [przeprowadzoneRekrutacje, setPrzeprowadzoneRekrutacje] = useState([]);
-    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
