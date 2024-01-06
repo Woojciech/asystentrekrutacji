@@ -15,9 +15,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 208vh;
+    padding-bottom: 228vh;
     width: 10%;
-    height: 230vh;
+    height: 250vh;
     background-color: black;
 }
 
@@ -32,7 +32,7 @@ body {
 
 .white-rectangle-generatedraport {
     width: 85%;
-    height: 210vh;
+    height: 230vh;
     flex-shrink: 0;
     background-color: white;
     margin-top: 2vh;

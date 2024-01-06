@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import {useEffect} from 'react';
 import axiosPublic from '../../utils/useAxios';
+import { useNavigate } from 'react-router-dom';
 import './RejestracjaUzytkownika.css';
 
 const RegisterUser = () => {
     const client = axiosPublic;
+    const navigate = useNavigate();
 
     const [userData, setUserData] = useState({
         imie: '',
@@ -60,6 +62,7 @@ const RegisterUser = () => {
             try {
                 const response = await client.post('/api/v1/uzytkownik/zarejestruj', userData);
                 console.log(response.data);
+                navigate('/');
             } catch (error) {
                 console.error(error);
             }
@@ -109,13 +112,15 @@ const RegisterUser = () => {
                             </div>
                             <div style={{display: 'flex', flexDirection: 'column'}}>
                                 <label className="form-info">Płeć:</label>
-                                <select className={`input-plec ${validationStatus.plec ? '' : 'invalid-input'}`}
-                                        name="plec"
-                                        value={userData.plec}
-                                        onChange={handleInputChange}>
+                                <select
+                                    className={`input-plec ${validationStatus.plec ? '' : 'invalid-input'}`}
+                                    name="plec"
+                                    value={userData.plec}
+                                    onChange={handleInputChange}
+                                >
                                     <option disabled selected value="">Wybierz</option>
-                                    <option value="MEZCZYZNA">Mężczyzna</option>
-                                    <option value="KOBIETA">Kobieta</option>
+                                    <option value="M">Mężczyzna</option>
+                                    <option value="K">Kobieta</option>
                                 </select>
                             </div>
                         </div>
