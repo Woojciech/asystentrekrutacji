@@ -34,6 +34,8 @@ const RegisterUser = () => {
         plec: true
     });
 
+    const [errorMessage, setErrorMessage] = useState('');
+
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         setUserData({...userData, [name]: value});
@@ -42,7 +44,6 @@ const RegisterUser = () => {
     };
 
     const handleSubmit = async () => {
-        // Check for empty fields
         const isEmptyField = Object.values(userData).some(value => value === '');
 
         if (userData.haslo !== userData.hasloConfirm) {
@@ -64,7 +65,11 @@ const RegisterUser = () => {
                 console.log(response.data);
                 navigate('/');
             } catch (error) {
-                console.error(error);
+                if (error.response && error.response.status === 400) {
+                    setErrorMessage(error.response.data);
+                } else {
+                    console.error(error);
+                }
             }
         }
     };
@@ -126,6 +131,7 @@ const RegisterUser = () => {
                         </div>
                     </div>
                     <button type="button" onClick={handleSubmit}>Zarejestruj</button>
+                    {errorMessage && <p className="error-message">{errorMessage}</p>}
                     <div className="line-below-button"></div>
                     <p className="login-text">
                         Masz już konto? <a href="/" className="login-link">Zaloguj się</a>
@@ -133,7 +139,6 @@ const RegisterUser = () => {
                 </form>
             </div>
         </div>
-        // </link>
     );
 };
 
