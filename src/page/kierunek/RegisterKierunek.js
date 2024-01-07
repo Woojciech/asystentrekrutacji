@@ -211,20 +211,6 @@ const RegisterKierunek = () => {
       const updatedHonoredAchievements = [...honoredAchievements];
       updatedHonoredAchievements[idx][field] = e.target.value;
       setHonoredAchievements(updatedHonoredAchievements);
-
-      // if(field === 'nazwa') {
-      //   const fieldUnique = honoredAchievements.filter((h) => h.nazwa === e.target.value).length == 0;
-      //   console.log(fieldUnique);
-      //   if(fieldUnique) {
-      //     const updatedHonoredAchievements = [...honoredAchievements];
-      //     updatedHonoredAchievements[idx][field] = e.target.value;
-      //     setHonoredAchievements(updatedHonoredAchievements);
-      //   } else {
-      //     const updatedHonoredAchievements = [...honoredAchievements];
-      //     updatedHonoredAchievements[idx][field] = "";
-      //     setHonoredAchievements(updatedHonoredAchievements);
-      //   }
-      // }
     }
 
     function deleteHonoredAchievement(e, idx) {
