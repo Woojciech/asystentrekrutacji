@@ -2,6 +2,7 @@ import RegisterKierunek from './page/kierunek/RegisterKierunek';
 import RegisterDaneRekrutacyjne from './page/daneRekrutacyjne/RegisterDaneRekrutacyjne';
 import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
 import Home from './page/home/Home';
+import ErrorPage from './page/error/ErrorPage';
 
 function App() {
   return (

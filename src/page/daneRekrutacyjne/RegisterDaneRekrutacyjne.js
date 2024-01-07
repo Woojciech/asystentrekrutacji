@@ -305,6 +305,8 @@ const RegisterDaneRekrutacyjne = () => {
     )
   }
 
+  const [error, setError] = useState(false);
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -323,7 +325,11 @@ const RegisterDaneRekrutacyjne = () => {
         }
       ).then(response => {
         console.log(response)
+        setError(false);
         window.location = "/"
+      }).catch(error => {
+        console.log(error.response)
+        setError(true);
       })
 
       console.log(response);
@@ -356,6 +362,22 @@ const RegisterDaneRekrutacyjne = () => {
               getHonoredAchievementsListGroup()
             }
           </div>
+          {
+            error ?
+            <div class="alert alert-danger" role="alert">
+              <h3>Błąd!</h3>
+              <h4>Upewnij się, że:</h4>
+              <ol>
+                <li>Wyniki maturalne nie powtarzają się</li>
+                <li>Ukończone studia nie powtarzają się</li>
+                <li>Honorowane osiągnięcia nie powtarzają się</li>
+              </ol>
+              <h4>A następnie prześlij formularz ponownie.</h4>
+            </div>
+
+            :
+            <></>
+          }
           <button type="submit" class="m-2 btn btn-danger">Prześlij</button>
         </form>
       </div>
