@@ -2,6 +2,7 @@ import RegisterKierunek from './page/kierunek/RegisterKierunek';
 import RegisterDaneRekrutacyjne from './page/daneRekrutacyjne/RegisterDaneRekrutacyjne';
 import {BrowserRouter as Router, Switch, Route, Routes} from 'react-router-dom';
 import Home from './page/home/Home';
+import ErrorPage from './page/error/ErrorPage';
 import RegisterUser from "./page/rejestracja/RejestracjaUzytkownika";
 import GenerujRaport from "./page/raport/RaportGenerator";
 import Raport from "./page/raport/Raport";

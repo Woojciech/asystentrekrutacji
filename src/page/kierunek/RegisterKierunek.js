@@ -18,6 +18,7 @@ const RegisterKierunek = () => {
 
     const [branch, setBranch] = useState()
     const [department, setDepartment] = useState()
+    const [stopienStudiow, setStopienStudiow] = useState()
 
     useEffect(() => {
       fetchFormData();   
@@ -270,6 +271,8 @@ const RegisterKierunek = () => {
       )
     }
 
+    const [error, setError] = useState(false) 
+
     function handleSubmit(event) {
       event.preventDefault();
       
@@ -288,6 +291,7 @@ const RegisterKierunek = () => {
             opis: description,
             dziedzina: branch,
             wydzial: department,
+            stopienStudiow: stopienStudiow,
             regulyWskaznikaRekrutacyjnego: recruitmentRules,
             punktyRekrutacyjneZaKierunki: honoredMajors,
             honorowaneOsiagniecia: honoredAchievements
@@ -299,7 +303,11 @@ const RegisterKierunek = () => {
           }
         ).then(response => {
           console.log(response)
+          setError(false)
           window.location = "/"
+        }).catch(error => { 
+          setError(true)
+          console.log(error.response)
         })
   
         console.log(response);
@@ -327,7 +335,7 @@ const RegisterKierunek = () => {
                   
                   <div className='col-6'>
                     <label class="form-label fw-bold">Stopień studiów</label>
-                    <Form.Select>
+                    <Form.Select onChange={e => setStopienStudiow(e.target.value)}>
                       {
                         poziomStudiow?.map((stopien, idx) => (
                           <option value={stopien}>{stopien}</option>
@@ -380,6 +388,23 @@ const RegisterKierunek = () => {
                     getHonoredAchievementsListGroup()
                   }
                 </div>
+                {
+                  error ?
+                  <div class="alert alert-danger" role="alert">
+                    <h3>Błąd!</h3>
+                    <h4>Upewnij się, że:</h4>
+                    <ol>
+                      <li>Kierunek o podanej nazwie, dziedzinie, wydziale oraz stopniu nie został już zarejestrowany</li>
+                      <li>Honorowane osiągnięcia nie powtarzają się</li>
+                      <li>Reguły wskaźnika rekrutacyjnego nie powtarzają się</li>
+                      <li>Punkty rekrutacyjne za kierunki nie powtarzają się</li>
+                    </ol>
+                    <h4>A następnie prześlij formularz ponownie.</h4>
+                  </div>
+
+                  :
+                  <></>
+                }
                 <button type="submit" class="m-2 btn btn-danger">Dodaj kierunek</button>
               </form>
             </div>
