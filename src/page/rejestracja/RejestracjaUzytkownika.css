@@ -1,13 +1,4 @@
 /* RegisterUser.css */
-
-body {
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background-color: #242424;
-    color: white;
-}
-
 .split-container {
     display: flex;
     width: 100%;
@@ -33,7 +24,7 @@ body {
     background-color: #242424;
 }
 
-form {
+.magic-form-register-user {
     width: 50vw;
     height: 48px;
     flex-shrink: 0;
@@ -48,7 +39,7 @@ input, select, button {
     color: white;
 }
 
-button {
+.amaizing-button-register-user {
     background-color: #4B72C2;
     color: white;
     cursor: pointer;

@@ -86,7 +86,7 @@ const RegisterUser = () => {
             </div>
             <div className={"form-container"}>
                 <h1 className="page-info">Utwórz nowe konto</h1>
-                <form>
+                <form className="magic-form-register-user">
                     <div style={{display: 'flex', flexDirection: 'column'}}>
                         <input type="text" name="imie" value={userData.imie} onChange={handleInputChange}
                                placeholder="Imię" className={validationStatus.imie ? '' : 'invalid-input'}/>
@@ -130,7 +130,7 @@ const RegisterUser = () => {
                             </div>
                         </div>
                     </div>
-                    <button type="button" onClick={handleSubmit}>Zarejestruj</button>
+                    <button className="amaizing-button-register-user" type="button" onClick={handleSubmit}>Zarejestruj</button>
                     {errorMessage && <p className="error-message">{errorMessage}</p>}
                     <div className="line-below-button"></div>
                     <p className="login-text">

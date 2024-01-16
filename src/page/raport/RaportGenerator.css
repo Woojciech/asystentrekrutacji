@@ -1,10 +1,4 @@
-body {
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background-color: #242424;
-    color: white;
-}
+
 
 .split-container-raport {
     display: flex;
