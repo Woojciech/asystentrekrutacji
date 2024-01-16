@@ -1,0 +1,165 @@
+body {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #242424;
+    color: white;
+}
+
+.split-container-generatedraport {
+    display: flex;
+    width: 100%;
+}
+
+.logo-container-generatedraport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 228vh;
+    width: 10%;
+    height: 250vh;
+    background-color: black;
+}
+
+.right-container-generatedraport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color: #242424;
+}
+
+.white-rectangle-generatedraport {
+    width: 85%;
+    height: 230vh;
+    flex-shrink: 0;
+    background-color: white;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    filter: drop-shadow(0px 10px 20px rgba(226, 236, 249, 0.60));
+    border-radius: 20px;
+}
+
+.raport-title-generatedraport {
+    margin-top: 1vw;
+}
+
+.no-data-avaliable-generatedraport {
+    color: black;
+}
+
+.raport-content-generatedraport {
+    color: black;
+}
+
+.part-info-header-generatedraport {
+    color: #3b7e00;
+    text-align: center;
+    padding-top: 1vw;
+}
+
+.info-line-generatedraport {
+    display: flow;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-left: 5vw;
+}
+
+.table-recruitment-points-generatedraport {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table-recruitment-points-generatedraport th,
+.table-recruitment-points-generatedraport td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.table-recruitment-points-generatedraport th {
+    background-color: #f2f2f2;
+}
+
+.lectures-table-generatedraport {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto 2vw;
+}
+
+.lectures-table-generatedraport th,
+.lectures-table-generatedraport td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.lectures-table-generatedraport th {
+    background-color: #f2f2f2;
+}
+
+.lecture-item {
+    background-color: #fff;
+}
+
+.matura-exam-table-generatedraport {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.matura-exam-table-generatedraport th,
+.matura-exam-table-generatedraport td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Center text content */
+}
+
+.matura-exam-table-generatedraport th {
+    background-color: #f2f2f2;
+}
+
+.matura-exam-table-generatedraport ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.matura-exam-table-generatedraport li {
+    margin-bottom: 5px;
+}
+
+.honorowane-osiagniecia-generatedraport {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.honorowane-osiagniecia-generatedraport h5 {
+    margin-top: 20px;
+}
+
+.honorowane-osiagniecia-generatedraport ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.honorowane-osiagniecia-generatedraport li {
+    margin-bottom: 5px;
+}
+
+.points-counting-rule-generatedraport {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.points-counting-rule-generatedraport h6 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.points-counting-rule-generatedraport b {
+    font-weight: bold;
+}
