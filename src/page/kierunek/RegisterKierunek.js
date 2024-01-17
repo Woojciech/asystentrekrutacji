@@ -30,12 +30,12 @@ const RegisterKierunek = () => {
   
       let data = formData?.data
       console.log(data)
-      setPoziomStudiow(data.stopnieStudiow)
-      setDziedzina(data.dziedziny)
-      setWydzial(data.wydzialy)
-      setPrzedmiotyMaturalne(data.przedmiotyMaturalne)
-      setStopnieMatury(data.stopnieMatury)
-      setMajors(data.kierunki)
+      setPoziomStudiow(data?.stopnieStudiow)
+      setDziedzina(data?.dziedziny)
+      setWydzial(data?.wydzialy)
+      setPrzedmiotyMaturalne(data?.przedmiotyMaturalne)
+      setStopnieMatury(data?.stopnieMatury)
+      setMajors(data?.kierunki)
     }
 
     const [recruitmentRules, setRecruitmentRules] = useState([{}]);
@@ -407,6 +407,7 @@ const RegisterKierunek = () => {
                 }
                 <button type="submit" class="m-2 btn btn-danger">Dodaj kierunek</button>
               </form>
+
             </div>
           </div>
     )

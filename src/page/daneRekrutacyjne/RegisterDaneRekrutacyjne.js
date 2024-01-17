@@ -368,7 +368,7 @@ const RegisterDaneRekrutacyjne = () => {
               <h3>Błąd!</h3>
               <h4>Upewnij się, że:</h4>
               <ol>
-                <li>Wyniki maturalne nie powtarzają się</li>
+                <li>Wyniki maturalne nie powtarzają się, oraz jest ich co najmniej 3</li>
                 <li>Ukończone studia nie powtarzają się</li>
                 <li>Honorowane osiągnięcia nie powtarzają się</li>
               </ol>
